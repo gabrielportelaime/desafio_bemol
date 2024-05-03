@@ -43,7 +43,7 @@ with open("movimentacoes_vale_credito.csv", "r") as arquivo:
                     porcentagens_debitos_valor[tipo_transacao] += valor_movimentado
 
 # PORCENTAGENS POR TIPO DE TRANSAÇÃO EM RELAÇÃO À QUANTIDADE -- CRÉDITO
-print("--------------------------------------- PORCENTAGENS DE CRÉDITO (QUANTIDADE) ---------------------------------------")
+print("\n" + "--------------------------------------- PORCENTAGENS DE CRÉDITO (QUANTIDADE) ---------------------------------------")
 for chave in sorted(porcentagens_creditos_quantidade, key = porcentagens_creditos_quantidade.get, reverse=True):
     valor = porcentagens_creditos_quantidade[chave]
     print("Tipo de compra: " + " -- " + chave + " -- ")
@@ -51,7 +51,7 @@ for chave in sorted(porcentagens_creditos_quantidade, key = porcentagens_credito
     print(f"Porcentagem de compras desse tipo: {(100*valor)/quantidade_movimentacoes_credito:.2f} %", end="\n\n")
 
 # PORCENTAGENS POR TIPO DE TRANSAÇÃO EM RELAÇÃO AOS VALORES DE TRANSAÇÕES -- CRÉDITO
-print("------------------------------------------ PORCENTAGENS DE CRÉDITO (VALOR) ------------------------------------------")
+print("\n" + "------------------------------------------ PORCENTAGENS DE CRÉDITO (VALOR) ------------------------------------------")
 for chave in sorted(porcentagens_creditos_valor, key=porcentagens_creditos_valor.get, reverse=True):
     valor = porcentagens_creditos_valor[chave]
     print("Tipo de compra: " + " -- " + chave + " -- ")
@@ -59,7 +59,7 @@ for chave in sorted(porcentagens_creditos_valor, key=porcentagens_creditos_valor
     print(f"Porcentagem em valores de compras desse tipo: {(100*valor)/soma_movimentacoes_credito:.2f} %", end="\n\n")
 
 # PORCENTAGENS POR TIPO DE TRANSAÇÃO EM RELAÇÃO À QUANTIDADE -- DÉBITO
-print("--------------------------------------- PORCENTAGENS DE DÉBITO (QUANTIDADE) ---------------------------------------")
+print("\n" + "--------------------------------------- PORCENTAGENS DE DÉBITO (QUANTIDADE) ---------------------------------------")
 for chave in sorted(porcentagens_debitos_quantidade, key=porcentagens_debitos_quantidade.get, reverse=True):
     valor = porcentagens_debitos_quantidade[chave]
     print("Tipo de compra: " + " -- " + chave + " -- ")
@@ -67,7 +67,7 @@ for chave in sorted(porcentagens_debitos_quantidade, key=porcentagens_debitos_qu
     print(f"Porcentagem de compras desse tipo: {(100*valor)/quantidade_movimentacoes_credito:.2f} %", end="\n\n")
 
 # PORCENTAGENS POR TIPO DE TRANSAÇÃO EM RELAÇÃO AOS VALORES DE TRANSAÇÕES -- DÉBITO
-print("------------------------------------------ PORCENTAGENS DE DÉBITO (VALOR) ------------------------------------------")
+print("\n" + "------------------------------------------ PORCENTAGENS DE DÉBITO (VALOR) ------------------------------------------")
 for chave in sorted(porcentagens_debitos_valor, key=porcentagens_debitos_valor.get, reverse=True):
     valor = porcentagens_debitos_valor[chave]
     print("Tipo de compra: " + " -- " + chave + " -- ")
